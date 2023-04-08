@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "UsersModel.h"
+
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -16,6 +18,13 @@ public:
     ~MainWindow();
 
 private:
+    void InitUsersModel();
+
+private slots:
+    void on_enterButton_clicked();
+
+private:
     Ui::MainWindow *ui;
+    UsersModel* _pUsersModel;
 };
 #endif // MAINWINDOW_H
